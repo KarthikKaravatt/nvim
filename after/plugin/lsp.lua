@@ -29,6 +29,7 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
+vim.keymap.set("n", "<leader>lf", function() vim.lsp.buf.format()end)
 -- (Optional) Configure lua language server for neovim
 lsp.nvim_workspace()
 
