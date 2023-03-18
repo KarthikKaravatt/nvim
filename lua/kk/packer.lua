@@ -67,12 +67,19 @@ return require('packer').startup(function(use)
 
     use 'nvim-tree/nvim-web-devicons'
 
-    use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
-
     use {
         'lewis6991/gitsigns.nvim',
         config = function()
             require('gitsigns').setup()
         end
     }
+    use({
+        "Pocco81/auto-save.nvim",
+        config = function()
+            require("auto-save").setup {
+                -- your config goes here
+                -- or just leave it empty :)
+            }
+        end,
+    })
 end)
