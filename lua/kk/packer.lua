@@ -82,4 +82,5 @@ return require('packer').startup(function(use)
             }
         end,
     })
+    use("sangdol/mintabline.vim")
 end)
