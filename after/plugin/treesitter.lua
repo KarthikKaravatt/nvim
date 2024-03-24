@@ -1,8 +1,7 @@
-
+require("nvim-treesitter.install").prefer_git = true
 require 'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
-
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
 
@@ -23,7 +22,7 @@ require 'nvim-treesitter.configs'.setup {
     -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
     -- the name of the parser)
     -- list of language that will be disabled
-    disable = { "c", "rust" },
+    disable = { },
     -- Or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
     disable = function(lang, buf)
       local max_filesize = 100 * 1024 -- 100 KB
@@ -43,5 +42,5 @@ require 'nvim-treesitter.configs'.setup {
 
 vim.keymap.set('n', '<C-l>', ':LspZeroFormat<CR>', { noremap = true, silent = true })
 
-vim.keymap.set('n', '<C-t>', ':ToggleTerm<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-`>', ':ToggleTerm<CR>', { noremap = true, silent = true })
 

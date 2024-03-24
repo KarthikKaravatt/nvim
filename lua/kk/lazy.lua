@@ -61,6 +61,17 @@ require('lazy').setup({
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" }
-  }
+  },
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
+  },
+  { 'Bekaboo/deadcolumn.nvim' },
+  { "shortcuts/no-neck-pain.nvim", version = "*" }
+
+
+
+
+
 
 })

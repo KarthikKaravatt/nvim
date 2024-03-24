@@ -27,3 +27,20 @@ require 'lspconfig'.typst_lsp.setup {
     exportPdf = "onType", -- Choose onType, onSave or never.
   }
 }
+
+require 'lspconfig'.lua_ls.setup {
+  settings = {
+    Lua = {
+      runtime = {
+        version = 'LuaJIT',
+        path = vim.split(package.path, ';'),
+      },
+      diagnostics = {
+        globals = { 'vim' },
+      },
+    },
+  },
+}
+
+
+

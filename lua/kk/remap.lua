@@ -16,3 +16,8 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 
 vim.keymap.set({ "n", "v" }, "<Leader>y", '"+y', { noremap = true, silent = true })
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+-- Map Shift+V to paste from the system clipboard
+vim.api.nvim_set_keymap('n', '<Leader>P', '"+p', {noremap = true, silent = true})
+
+
+
