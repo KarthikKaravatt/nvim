@@ -67,11 +67,12 @@ require('lazy').setup({
     dependencies = { 'nvim-tree/nvim-web-devicons' }
   },
   { 'Bekaboo/deadcolumn.nvim' },
-  { "shortcuts/no-neck-pain.nvim", version = "*" }
-
-
-
-
-
+  { "shortcuts/no-neck-pain.nvim", version = "*" },
+  {
+    'chomosuke/typst-preview.nvim',
+    lazy = false, -- or ft = 'typst'
+    version = '0.1.*',
+    build = function() require 'typst-preview'.update() end,
+  }
 
 })
