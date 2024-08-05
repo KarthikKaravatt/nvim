@@ -56,7 +56,6 @@ require('lazy').setup({
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
-  { "ggandor/leap.nvim" },
   {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
@@ -73,6 +72,21 @@ require('lazy').setup({
     lazy = false, -- or ft = 'typst'
     version = '0.1.*',
     build = function() require 'typst-preview'.update() end,
-  }
-
+  },
+  -- add this to your lua/plugins.lua, lua/plugins/init.lua,  or the file you keep your other plugins:
+  {
+    'numToStr/Comment.nvim',
+    opts = {
+      -- add any options here
+    }
+  },
+  {
+    "danymat/neogen",
+    config = true,
+    -- Uncomment next line if you want to follow only stable versions
+    -- version = "*"
+  },
+  {"mfussenegger/nvim-lint"},
+  {"m4xshen/autoclose.nvim"},
+  {"goolord/alpha-nvim"},
 })

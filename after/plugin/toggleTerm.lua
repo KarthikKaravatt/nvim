@@ -13,7 +13,7 @@ end
 require("toggleterm").setup {
   size = function(term)
     if term.direction == "horizontal" then
-      return vim.api.nvim_win_get_height(0) * 0.4
+      return vim.api.nvim_win_get_height(0) * 0.5
     elseif term.direction == "vertical" then
       return vim.o.columns * 0.3
     end
