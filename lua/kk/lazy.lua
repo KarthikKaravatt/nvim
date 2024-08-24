@@ -89,4 +89,5 @@ require('lazy').setup({
   {"mfussenegger/nvim-lint"},
   {"m4xshen/autoclose.nvim"},
   {"goolord/alpha-nvim"},
+  {"windwp/nvim-ts-autotag"}
 })
