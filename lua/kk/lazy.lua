@@ -13,8 +13,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
-
 -- Auto-install lazy.nvim if not present
 if not vim.loop.fs_stat(lazypath) then
   print('Installing lazy.nvim....')
@@ -42,8 +40,6 @@ require('lazy').setup({
   { 'nvim-treesitter/nvim-treesitter' },
   { 'rose-pine/neovim',                 name = 'rose-pine' },
   { "github/copilot.vim" },
-  { "jbyuki/nabla.nvim" },
-  { "dhruvasagar/vim-table-mode" },
   {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.5',
@@ -67,12 +63,6 @@ require('lazy').setup({
   },
   { 'Bekaboo/deadcolumn.nvim' },
   { "shortcuts/no-neck-pain.nvim", version = "*" },
-  {
-    'chomosuke/typst-preview.nvim',
-    lazy = false, -- or ft = 'typst'
-    version = '0.1.*',
-    build = function() require 'typst-preview'.update() end,
-  },
   -- add this to your lua/plugins.lua, lua/plugins/init.lua,  or the file you keep your other plugins:
   {
     'numToStr/Comment.nvim',
@@ -80,14 +70,11 @@ require('lazy').setup({
       -- add any options here
     }
   },
-  {
-    "danymat/neogen",
-    config = true,
-    -- Uncomment next line if you want to follow only stable versions
-    -- version = "*"
-  },
-  {"mfussenegger/nvim-lint"},
-  {"m4xshen/autoclose.nvim"},
-  {"goolord/alpha-nvim"},
-  {"windwp/nvim-ts-autotag"}
+  { "mfussenegger/nvim-lint" },
+  { "m4xshen/autoclose.nvim" },
+  { "goolord/alpha-nvim" },
+  { "windwp/nvim-ts-autotag" },
+  { "mfussenegger/nvim-dap" },
+  { "rcarriga/nvim-dap-ui",  dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
+
 })
