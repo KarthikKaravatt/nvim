@@ -76,5 +76,4 @@ require('lazy').setup({
   { "windwp/nvim-ts-autotag" },
   { "mfussenegger/nvim-dap" },
   { "rcarriga/nvim-dap-ui",  dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
-
 })
