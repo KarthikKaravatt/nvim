@@ -14,7 +14,7 @@ require('mason-lspconfig').setup({
   handlers = {
     lsp_zero.default_setup,
   },
-  ensure_installed = {"basedpyright", "lua_ls"},
+  ensure_installed = {"basedpyright"},
 })
 
 vim.filetype.add({

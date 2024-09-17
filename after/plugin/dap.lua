@@ -1,8 +1,15 @@
 local dap = require("dap")
 vim.keymap.set('n', '<Leader>dt', dap.toggle_breakpoint, {})
 vim.keymap.set('n', '<Leader>dc', dap.continue, {})
-
+vim.keymap.set("n", "<Leader>di", dap.step_into)
+vim.keymap.set("n", "<Leader>dv", dap.step_over)
+vim.keymap.set("n", "<Leader>do", dap.step_out)
+vim.keymap.set("n", "<Leader>db", dap.step_back)
+vim.keymap.set("n", "<Leader>dr", dap.restart)
 -- Python Dap config
+vim.keymap.set("n", "<Leader>d?", function()
+  require("dapui").eval(nil, { enter = true })
+end)
 dap.adapters.python = function(cb, config)
   if config.request == 'attach' then
     ---@diagnostic disable-next-line: undefined-field
@@ -32,13 +39,13 @@ end
 dap.configurations.python = {
   {
     -- The first three options are required by nvim-dap
-    type = 'python'; -- the type here established the link to the adapter definition: `dap.adapters.python`
-    request = 'launch';
-    name = "Launch file";
+    type = 'python', -- the type here established the link to the adapter definition: `dap.adapters.python`
+    request = 'launch',
+    name = "Launch file",
 
     -- Options below are for debugpy, see https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings for supported options
 
-    program = "${file}"; -- This configuration will launch the current file if used.
+    program = "${file}", -- This configuration will launch the current file if used.
     pythonPath = function()
       -- debugpy supports launching an application with a different interpreter then the one used to launch debugpy itself.
       -- The code below looks for a `venv` or `.venv` folder in the current directly and uses the python within.
@@ -51,6 +58,6 @@ dap.configurations.python = {
       else
         return 'python'
       end
-    end;
+    end,
   },
 }
