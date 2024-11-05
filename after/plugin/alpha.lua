@@ -1,6 +1,9 @@
-local config = function()
-  local alpha = require("alpha")
-  local dashboard = require("alpha.themes.dashboard")
+	local alpha = require('alpha')
+	local dashboard = require('alpha.themes.dashboard')
+	local section = dashboard.section
+	local fn = vim.fn
+	local config = dashboard.config
+
   dashboard.section.header.val = {
     "",
     [[⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]],
@@ -23,16 +26,17 @@ local config = function()
     [[⠿⠛⠛⠛⠛⠛⠛⠻⢿⣿⣿⣿⣿⣯⣟⠷⢷⣿⡿⠋⠀⠀⠀⠀⣵⡀⢠⡿⠋⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]],
     [[⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠛⢿⣿⣿⠂⠀⠀⠀⠀⠀⢀⣽⣿⣿⣿⣿⣿⣿⣿⣍⠛⠿⣿⣿⣿⣿⣿⣿]],
   }
-  dashboard.opts.layout = {
-    { type = "padding", val = 1},
-    dashboard.section.header,
-    { type = "padding", val = 1 },
-    dashboard.section.footer,
 
-  }
-  alpha.setup(dashboard.opts)
-end
-config();
+	local marginTopPercent = 0.2
+	local headerPadding = fn.max({2, fn.floor(fn.winheight(0) * marginTopPercent) })
+
+	config.layout = {
+		{ type = 'padding', val = headerPadding },
+		section.header,
+		{ type = 'padding', val = 2 },
+	}
+
+	alpha.setup(config)
 
 vim.api.nvim_create_autocmd("User", {
   pattern = "AlphaReady",

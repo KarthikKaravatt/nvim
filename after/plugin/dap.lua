@@ -1,15 +1,14 @@
 local dap = require("dap")
-vim.keymap.set('n', '<Leader>dt', dap.toggle_breakpoint, {})
-vim.keymap.set('n', '<Leader>dc', dap.continue, {})
-vim.keymap.set("n", "<Leader>di", dap.step_into)
-vim.keymap.set("n", "<Leader>dv", dap.step_over)
-vim.keymap.set("n", "<Leader>do", dap.step_out)
-vim.keymap.set("n", "<Leader>db", dap.step_back)
-vim.keymap.set("n", "<Leader>dr", dap.restart)
--- Python Dap config
-vim.keymap.set("n", "<Leader>d?", function()
-  require("dapui").eval(nil, { enter = true })
-end)
+vim.keymap.set('n', '<Leader>dt', require('dap').toggle_breakpoint, { desc = 'Toggle Breakpoint' })
+vim.keymap.set('n', '<Leader>dc', require('dap').continue, { desc = 'Continue' })
+vim.keymap.set('n', '<Leader>di', require('dap').step_into, { desc = 'Step Into' })
+vim.keymap.set('n', '<Leader>dv', require('dap').step_over, { desc = 'Step Over' })
+vim.keymap.set('n', '<Leader>do', require('dap').step_out, { desc = 'Step Out' })
+vim.keymap.set('n', '<Leader>db', require('dap').step_back, { desc = 'Step Back' })
+vim.keymap.set('n', '<Leader>dr', require('dap').restart, { desc = 'Restart' })
+vim.keymap.set('n', '<Leader>d?', function()
+  require('dapui').eval(nil, { enter = true })
+end, { desc = 'Evaluate Expression' })
 dap.adapters.python = function(cb, config)
   if config.request == 'attach' then
     ---@diagnostic disable-next-line: undefined-field
@@ -60,4 +59,20 @@ dap.configurations.python = {
       end
     end,
   },
+}
+
+dap.adapters.godot = {
+	type = "server",
+	host = "127.0.0.1",
+	port = 6006,
+}
+
+dap.configurations.gdscript = {
+	{
+		type = "godot",
+		request = "launch", -- either "launch" or "attach"
+		name = "Launch Main Scene",
+		-- specific to gdscript
+		project = "${workspaceFolder}",
+	},
 }

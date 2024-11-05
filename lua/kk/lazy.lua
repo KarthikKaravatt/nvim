@@ -53,17 +53,10 @@ require('lazy').setup({
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
   {
-    "ThePrimeagen/harpoon",
-    branch = "harpoon2",
-    dependencies = { "nvim-lua/plenary.nvim" }
-  },
-  {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' }
   },
   { 'Bekaboo/deadcolumn.nvim' },
-  { "shortcuts/no-neck-pain.nvim", version = "*" },
-  -- add this to your lua/plugins.lua, lua/plugins/init.lua,  or the file you keep your other plugins:
   {
     'numToStr/Comment.nvim',
     opts = {
@@ -93,5 +86,6 @@ require('lazy').setup({
         desc = "Buffer Local Keymaps (which-key)",
       },
     },
-  }
+    { "habamax/vim-godot", event = 'VimEnter' }
+  },
 })
