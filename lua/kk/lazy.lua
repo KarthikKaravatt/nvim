@@ -67,7 +67,7 @@ require('lazy').setup({
   { "goolord/alpha-nvim" },
   { "windwp/nvim-ts-autotag" },
   { "mfussenegger/nvim-dap" },
-  { "rcarriga/nvim-dap-ui",  dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
+  { "rcarriga/nvim-dap-ui",   dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
@@ -87,4 +87,15 @@ require('lazy').setup({
     },
     { "habamax/vim-godot", event = 'VimEnter' }
   },
+  {
+    'razak17/tailwind-fold.nvim',
+    opts = {},
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    ft = { 'html', 'svelte', 'astro', 'vue', 'typescriptreact', 'php', 'blade' },
+  },
+  {
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    opts = {},
+  }
 })
