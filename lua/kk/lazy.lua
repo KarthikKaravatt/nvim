@@ -16,6 +16,8 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Plugin Configuration
 local plugins = {
+
+
   -- Treesitter for syntax highlighting and parsing
   { 'nvim-treesitter/nvim-treesitter' },
 
@@ -77,12 +79,18 @@ local plugins = {
   -- Godot integration
   { "habamax/vim-godot", event = 'VimEnter' },
 
-  -- TypeScript tools
+  -- LSP and completion
   {
     "pmizio/typescript-tools.nvim",
-    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    dependencies = { "nvim-lua/plenary.nvim", 'neovim/nvim-lspconfig'},
     opts = {},
   },
+
+  { 'neovim/nvim-lspconfig' },
+  { 'hrsh7th/cmp-nvim-lsp' },
+  { 'hrsh7th/nvim-cmp' },
+  {'williamboman/mason.nvim'},
+  {'williamboman/mason-lspconfig.nvim'},
 
   -- Tailwind tools
   {
@@ -103,12 +111,6 @@ local plugins = {
     ft = { 'html', 'svelte', 'astro', 'vue', 'typescriptreact', 'php', 'blade' },
   },
 
-  -- LSP and completion
-  { 'neovim/nvim-lspconfig' },
-  { 'hrsh7th/cmp-nvim-lsp' },
-  { 'hrsh7th/nvim-cmp' },
-  {'williamboman/mason.nvim'},
-  {'williamboman/mason-lspconfig.nvim'},
 }
 
 -- Load Plugins
