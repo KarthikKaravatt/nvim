@@ -105,13 +105,7 @@ local plugins = {
 		opts = {}, -- Add configuration here if needed
 	},
 	-- Auto pairs for closing tags automaticaly
-	{
-		"windwp/nvim-autopairs",
-		event = "InsertEnter",
-		config = true,
-		-- use opts = {} for passing setup options
-		-- this is equivalent to setup({}) function
-	},
+	{ "m4xshen/autoclose.nvim" },
 	-- Which-key for keybinding hints
 	{
 		"folke/which-key.nvim",
