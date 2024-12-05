@@ -50,9 +50,8 @@ local plugins = {
     'numToStr/Comment.nvim',
     opts = {}, -- Add configuration here if needed
   },
-  { 'mfussenegger/nvim-lint' },
-  { 'm4xshen/autoclose.nvim' },
   { 'goolord/alpha-nvim' },
+  {'m4xshen/autoclose.nvim'},
   { 'windwp/nvim-ts-autotag' },
   { 'mfussenegger/nvim-dap' },
 
@@ -110,7 +109,8 @@ local plugins = {
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
     ft = { 'html', 'svelte', 'astro', 'vue', 'typescriptreact', 'php', 'blade' },
   },
-
+  -- Formating
+  {'lukas-reineke/lsp-format.nvim'},
 }
 
 -- Load Plugins

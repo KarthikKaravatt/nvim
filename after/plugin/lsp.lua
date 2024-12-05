@@ -47,4 +47,10 @@ cmp.setup({
   },
   mapping = cmp.mapping.preset.insert({}),
 })
-
+-- recognise the typt file type
+vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
+    pattern = "*.typ",
+    callback = function()
+        vim.bo.filetype = "typst"
+    end,
+})
