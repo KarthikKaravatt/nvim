@@ -1,1 +1,1 @@
-require("kk")
+require("config.lazy")
