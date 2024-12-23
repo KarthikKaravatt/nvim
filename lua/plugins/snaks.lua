@@ -11,7 +11,7 @@ return {
 			bigfile = { enabled = true },
 			indent = { enabled = true },
 			input = { enabled = true },
-			notifier = { enabled = true },
+			notifier = { enabled = false },
 			quickfile = { enabled = true },
 			scroll = { enabled = true },
 			statuscolumn = { enabled = true },

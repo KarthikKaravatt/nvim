@@ -99,7 +99,6 @@ vim.keymap.set({ "n", "v" }, "<Leader>y", '"+y', { noremap = true, silent = true
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 vim.api.nvim_set_keymap("n", "<Leader>P", '"+p', { noremap = true, silent = true })
 
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {
