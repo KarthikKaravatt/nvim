@@ -36,12 +36,6 @@ vim.opt.colorcolumn = "79"
 vim.opt.textwidth = 78
 vim.opt.fileformat = "unix"
 
--- Sync clipboard between OS and Neovim.
---  Schedule the setting after `UiEnter` because it can increase startup-time.
-vim.schedule(function()
-	vim.opt.clipboard = "unnamedplus"
-end)
-
 -- Enable break indent
 vim.opt.breakindent = true
 
