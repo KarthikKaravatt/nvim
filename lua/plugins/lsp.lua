@@ -191,7 +191,7 @@ return {
 						},
 					},
 					zls = {
-						cmd = { "/Program Files/zls/zig-out/bin/zls.exe" },
+						cmd = { "zls" },
 						on_new_config = function(new_config, new_root_dir)
 							if vim.fn.filereadable(vim.fs.joinpath(new_root_dir, "zls.json")) ~= 0 then
 								new_config.cmd = { "zls", "--config-path", "zls.json" }
