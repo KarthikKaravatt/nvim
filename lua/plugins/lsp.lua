@@ -60,6 +60,7 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",
+					"harper_ls",
 				},
 				automatic_installation = true,
 				handlers = {
