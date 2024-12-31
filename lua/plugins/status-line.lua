@@ -5,7 +5,7 @@ return {
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
 	},
-	event = { "BufEnter" },
+	event = { "BufReadPre", "BufNewFile" },
 	config = function(_, opts)
 		require("sttusline").setup()
 	end,
