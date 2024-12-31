@@ -23,11 +23,6 @@ return {
 		dependencies = {
 			{ "williamboman/mason-lspconfig.nvim" },
 		},
-		init = function()
-			-- Reserve a space in the gutter
-			-- This will avoid an annoying layout shift in the screen
-			vim.opt.signcolumn = "yes"
-		end,
 		opts = {
 			servers = {
 				lua_ls = {},

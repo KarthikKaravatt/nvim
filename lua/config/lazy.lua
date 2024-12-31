@@ -96,6 +96,9 @@ vim.api.nvim_set_keymap("n", "<Leader>P", '"+p', { noremap = true, silent = true
 
 -- Setup lazy.nvim
 require("lazy").setup({
+	defaults = {
+		lazy = true,
+	},
 	spec = {
 		-- import your plugins
 		{ import = "plugins" },
@@ -103,6 +106,6 @@ require("lazy").setup({
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.
 	-- automatically check for plugin updates
-	checker = { enabled = true },
+	-- checker = { enabled = true },
 })
 vim.cmd([[colorscheme vscode]])
