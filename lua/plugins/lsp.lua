@@ -61,6 +61,9 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"harper_ls",
+					"eslint",
+					"tailwindcss",
+					"zls",
 				},
 				automatic_installation = true,
 				handlers = {

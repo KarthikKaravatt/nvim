@@ -1,3 +1,7 @@
+local scroll = true
+if vim.g.neovide then
+	scroll = false
+end
 return {
 	{
 		"folke/snacks.nvim",
@@ -13,7 +17,7 @@ return {
 			input = { enabled = true },
 			notifier = { enabled = false },
 			quickfile = { enabled = true },
-			scroll = { enabled = true },
+			scroll = { enabled = scroll },
 			statuscolumn = { enabled = true },
 			words = { enabled = true },
 			---@class snacks.dashboard.Config

@@ -5,7 +5,7 @@ return {
 	opts = {},
 	keys = {
 		{
-			"-",
+			"_",
 			function()
 				vim.cmd("Oil")
 			end,

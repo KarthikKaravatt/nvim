@@ -1,5 +1,5 @@
 return {
 	"windwp/nvim-ts-autotag",
 	opts = {},
-	ft = { "html", "tsx", "jsx" },
+	event = { "BufRead *.tsx", "BufRead *.html", "BufRead *.jsx" },
 }

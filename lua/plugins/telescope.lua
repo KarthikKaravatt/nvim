@@ -49,12 +49,14 @@ return { -- Fuzzy Finder (files, lsp, etc)
 				["ui-select"] = {
 					require("telescope.themes").get_dropdown(),
 				},
+				persisted = {},
 			},
 		})
 
 		-- Enable Telescope extensions if they are installed
 		pcall(require("telescope").load_extension, "fzf")
 		pcall(require("telescope").load_extension, "ui-select")
+		pcall(require("telescope").load_extension, "persisted")
 	end,
 	keys = {
 		{
@@ -105,6 +107,13 @@ return { -- Fuzzy Finder (files, lsp, etc)
 				require("telescope.builtin").find_files({ cwd = vim.fn.stdpath("config") })
 			end,
 			desc = "Find neovim files",
+		},
+		{
+			"<leader>fs",
+			function()
+				require("persisted")
+				vim.cmd("Telescope persisted")
+			end,
 		},
 	},
 }

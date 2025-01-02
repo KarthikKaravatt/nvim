@@ -91,6 +91,48 @@ vim.keymap.set({ "n", "v" }, "<Leader>y", '"+y', { noremap = true, silent = true
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 vim.api.nvim_set_keymap("n", "<Leader>P", '"+p', { noremap = true, silent = true })
 
+-- Increase/decrease horizontal split size
+vim.keymap.set("n", "<C-Up>", ":resize +2<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-Down>", ":resize -2<CR>", { noremap = true, silent = true })
+
+-- Increase/decrease vertical split size
+vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", { noremap = true, silent = true })
+
+-- New tab
+vim.keymap.set("n", "<Leader>t", ":tabnew<CR>", { noremap = true, silent = true })
+
+if vim.loop.os_uname().sysname == "Windows_NT" then
+	-- Windows-specific settings (PowerShell)
+	vim.opt.shell = "pwsh"
+	vim.opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
+	vim.opt.shellquote = '"'
+	vim.opt.shellxquote = ""
+else
+	-- Linux-specific settings (Bash or Zsh)
+	vim.opt.shell = "/bin/bash" -- Replace with "/bin/zsh" if you use Zsh
+	vim.opt.shellcmdflag = "-c"
+	vim.opt.shellquote = '"'
+	vim.opt.shellxquote = ""
+end
+
+if vim.g.neovide then
+	vim.o.guifont = "JetBrainsMono NF:h12"
+	vim.g.neovide_transparency = 0.7
+	vim.g.neovide_normal_opacity = 0.7
+	vim.g.neovide_scroll_animation_far_lines = 1
+	vim.g.neovide_hide_mouse_when_typing = false
+	vim.g.neovide_cursor_vfx_mode = "pixiedust"
+
+	-- Set neovide directory to home
+	vim.api.nvim_create_autocmd("VimEnter", {
+		pattern = "*",
+		callback = function()
+			vim.cmd("cd ~")
+		end,
+	})
+end
+
 -- Setup lazy.nvim
 require("lazy").setup({
 	defaults = {
