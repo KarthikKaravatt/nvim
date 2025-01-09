@@ -133,6 +133,13 @@ if vim.g.neovide then
 	})
 end
 
+local function open_tab_with_terminal()
+	vim.cmd("tabnew") -- Open a new tab
+	vim.cmd("terminal") -- Open a terminal in the new tab
+end
+
+vim.keymap.set("n", "<leader>T", open_tab_with_terminal, { noremap = true, silent = true })
+
 -- Setup lazy.nvim
 require("lazy").setup({
 	defaults = {
