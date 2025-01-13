@@ -20,27 +20,33 @@ return {
 			end,
 		},
 		{
-			"<C-h>",
+			"<C-6>",
 			function()
 				Harpoon:list():select(1)
 			end,
 		},
 		{
-			"<C-j>",
+			"<C-7>",
 			function()
 				Harpoon:list():select(2)
 			end,
 		},
 		{
-			"<C-k>",
+			"<C-8>",
 			function()
 				Harpoon:list():select(3)
 			end,
 		},
 		{
-			"<C-l>",
+			"<C-9>",
 			function()
 				Harpoon:list():select(4)
+			end,
+		},
+		{
+			"<C-0>",
+			function()
+				Harpoon:list():select(5)
 			end,
 		},
 	},
