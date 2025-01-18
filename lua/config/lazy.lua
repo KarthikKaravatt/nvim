@@ -115,6 +115,8 @@ vim.keymap.set("n", "<C-S-k>", "<cmd>Treewalker SwapUp<cr>", { silent = true })
 vim.keymap.set("n", "<C-S-l>", "<cmd>Treewalker SwapRight<CR>", { silent = true })
 vim.keymap.set("n", "<C-S-h>", "<cmd>Treewalker SwapLeft<CR>", { silent = true })
 
+vim.opt.laststatus = 2
+
 if vim.loop.os_uname().sysname == "Windows_NT" then
 	-- Windows-specific settings (PowerShell)
 	vim.opt.shell = "pwsh"

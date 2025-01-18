@@ -1,39 +1,16 @@
--- lazy
 return {
-	"sontungexpt/sttusline",
-	branch = "table_version",
-	dependencies = {
-		"nvim-tree/nvim-web-devicons",
-	},
-	event = { "BufReadPre", "BufNewFile" },
-	config = function(_, opts)
-		require("sttusline").setup({
-			statusline_color = "#222d3d",
-			disabled = {
-				filetypes = {
-					-- "NvimTree",
-					-- "lazy",
-				},
-				buftypes = {
-					"terminal",
-				},
-			},
-			components = {
+	lazy = false,
+	-- Calls `require('slimline').setup({})`
+	"sschleemilch/slimline.nvim",
+	opts = {
+		verbose_mode = true,
+		style = "fg",
+		components = {
+			left = {
 				"mode",
-				"os-uname",
-				"filename",
-				"git-branch",
-				"git-diff",
-				"%=",
-				"diagnostics",
-				"lsps-formatters",
-				"copilot",
-				"copilot-loading",
-				"indent",
-				"encoding",
-				"pos-cursor",
-				"pos-cursor-progress",
+				"git",
+				"recording",
 			},
-		})
-	end,
+		},
+	},
 }
