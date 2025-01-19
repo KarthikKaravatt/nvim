@@ -1,5 +1,6 @@
 return {
-	lazy = false,
+	lazy = true,
+	event = "InsertEnter",
 	-- Calls `require('slimline').setup({})`
 	"sschleemilch/slimline.nvim",
 	opts = {
