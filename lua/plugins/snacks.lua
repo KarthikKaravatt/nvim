@@ -13,7 +13,18 @@ return {
 			-- or leave it empty to use the default settings
 			-- refer to the configuration section below
 			bigfile = { enabled = true },
-			indent = { enabled = true },
+			indent = {
+				enabled = true,
+				filter = function(buf)
+					if vim.bo[buf].filetype == "markdown" then
+						return false
+					end
+					-- Default behavior
+					return vim.g.snacks_indent ~= false
+						and vim.b[buf].snacks_indent ~= false
+						and vim.bo[buf].buftype == ""
+				end,
+			},
 			input = { enabled = true },
 			notifier = { enabled = false },
 			quickfile = { enabled = true },
