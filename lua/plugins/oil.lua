@@ -3,6 +3,7 @@ return {
 	---@module 'oil'
 	---@type oil.SetupOpts
 	opts = {},
+	lazy = false,
 	keys = {
 		{
 			"_",

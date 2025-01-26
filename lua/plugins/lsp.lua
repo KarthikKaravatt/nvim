@@ -19,13 +19,12 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		lazy = true,
-		event = { "BufReadPre", "BufNewFile" },
+		event = { "BufReadPost", "BufNewFile" },
 		dependencies = {
 			{ "williamboman/mason-lspconfig.nvim" },
 		},
 		opts = {},
-
-		config = function(_, opts)
+		init = function(_, opts)
 			vim.api.nvim_create_autocmd("LspAttach", {
 				desc = "LSP actions",
 				callback = function(event)
@@ -98,15 +97,13 @@ return {
 					)
 				end,
 			})
+		end,
+		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",
-					"harper_ls",
-					"eslint",
-					"tailwindcss",
-					"zls",
 				},
-				automatic_installation = true,
+				automatic_installation = false,
 				handlers = {
 					-- this first function is the "default handler"
 					-- it applies to every language server without a "custom handler"
