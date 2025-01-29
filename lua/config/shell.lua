@@ -12,7 +12,17 @@ else
 	vim.opt.shellxquote = ""
 end
 
-vim.api.nvim_create_autocmd("TermOpen", {
+vim.api.nvim_create_autocmd({ "TermEnter", "TermLeave" }, {
 	pattern = "*",
-	command = "setlocal nonumber norelativenumber",
+	callback = function()
+		if vim.o.buftype == "terminal" then
+			if vim.fn.mode() == "t" then
+				vim.opt_local.relativenumber = false
+				vim.opt_local.number = false
+			else
+				vim.opt_local.number = true
+				vim.opt_local.relativenumber = true
+			end
+		end
+	end,
 })

@@ -1,6 +1,6 @@
 return {
 	lazy = true,
-	event = { "BufReadPre", "BufNewFile" },
+	event = { "BufReadPre", "BufNewFile", "TermOpen" },
 	-- Calls `require('slimline').setup({})`
 	"sschleemilch/slimline.nvim",
 	opts = {
