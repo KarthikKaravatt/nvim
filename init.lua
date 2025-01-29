@@ -1,3 +1,7 @@
+---
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 local config_dir = vim.fn.stdpath("config") .. "/lua/config/"
 
 local function load_config_files()

@@ -11,3 +11,8 @@ else
 	vim.opt.shellquote = '"'
 	vim.opt.shellxquote = ""
 end
+
+vim.api.nvim_create_autocmd("TermOpen", {
+	pattern = "*",
+	command = "setlocal nonumber norelativenumber",
+})
