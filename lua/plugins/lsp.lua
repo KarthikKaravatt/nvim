@@ -1,30 +1,22 @@
 return {
-
 	-- LSP Plugins
 	{
-		-- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
-		-- used for completion, annotations and signatures of Neovim apis
 		"folke/lazydev.nvim",
 		ft = "lua",
 		opts = {
 			library = {
-				-- Load luvit types when the `vim.uv` word is found
 				{ path = "luvit-meta/library", words = { "vim%.uv" } },
 			},
 		},
 	},
 	{ "Bilal2453/luvit-meta", lazy = true },
 
-	-- LSP
+	-- nvim-lspconfig: Configure keymaps and basic LSP attachment
 	{
 		"neovim/nvim-lspconfig",
 		lazy = true,
-		event = { "BufReadPost", "BufNewFile" },
-		dependencies = {
-			{ "williamboman/mason-lspconfig.nvim" },
-		},
-		opts = {},
-		init = function(_, opts)
+		event = { "VeryLazy" },
+		init = function(_, _)
 			vim.api.nvim_create_autocmd("LspAttach", {
 				desc = "LSP actions",
 				callback = function(event)
@@ -98,20 +90,23 @@ return {
 				end,
 			})
 		end,
-		config = function()
-			require("mason-lspconfig").setup({
-				ensure_installed = {
-					"lua_ls",
-				},
-				automatic_installation = false,
-				handlers = {
-					-- this first function is the "default handler"
-					-- it applies to every language server without a "custom handler"
-					function(server_name)
-						require("lspconfig")[server_name].setup({})
-					end,
-				},
-			})
-		end,
+	},
+
+	-- mason-lspconfig: Use opts to configure without an explicit config function.
+	-- Load this plugin even later using the "VeryLazy" event.
+	{
+		"williamboman/mason-lspconfig.nvim",
+		lazy = true,
+		event = { "VeryLazy", "BufReadPost" }, -- Defers loading until after initial startup
+		dependencies = { "neovim/nvim-lspconfig" },
+		opts = {
+			ensure_installed = { "lua_ls" },
+			automatic_installation = false,
+			handlers = {
+				function(server_name)
+					require("lspconfig")[server_name].setup({})
+				end,
+			},
+		},
 	},
 }
