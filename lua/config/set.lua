@@ -1,3 +1,5 @@
+vim.cmd([[colorscheme wildcharm]])
+
 vim.g.have_nerd_font = true
 
 vim.opt.tabstop = 2
@@ -51,3 +53,6 @@ vim.opt.inccommand = "split"
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 vim.opt.showtabline = 0
+
+-- Remove tilde lines
+vim.opt.fillchars = { eob = " " }
