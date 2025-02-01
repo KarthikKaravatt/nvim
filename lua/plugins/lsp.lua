@@ -2,6 +2,7 @@ return {
 	-- LSP Plugins
 	{
 		"folke/lazydev.nvim",
+		event = "VeryLazy",
 		ft = "lua",
 		opts = {
 			library = {
@@ -92,12 +93,10 @@ return {
 		end,
 	},
 
-	-- mason-lspconfig: Use opts to configure without an explicit config function.
-	-- Load this plugin even later using the "VeryLazy" event.
 	{
 		"williamboman/mason-lspconfig.nvim",
 		lazy = true,
-		event = { "VeryLazy", "BufReadPost" }, -- Defers loading until after initial startup
+		event = { "VeryLazy" }, -- Defers loading until after initial startup
 		dependencies = { "neovim/nvim-lspconfig" },
 		opts = {
 			ensure_installed = { "lua_ls" },
