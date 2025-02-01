@@ -7,7 +7,7 @@ return {
 			show_hidden = false, -- Default to false
 		},
 	},
-	lazy = false,
+	lazy = true,
 	keys = {
 		{
 			"_",
