@@ -12,7 +12,6 @@ return {
 	},
 	{ "Bilal2453/luvit-meta", lazy = true },
 
-	-- nvim-lspconfig: Configure keymaps and basic LSP attachment
 	{
 		"neovim/nvim-lspconfig",
 		lazy = true,

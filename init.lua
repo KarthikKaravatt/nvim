@@ -7,7 +7,7 @@ local config_dir = vim.fn.stdpath("config") .. "/lua/config/"
 local function load_config_files()
 	local scan = vim.loop.fs_scandir(config_dir)
 	if not scan then
-		vim.api.nvim_err_writeln("Error: Config directory not found: " .. config_dir)
+		vim.notify("Error config direcotry not found", 1, nil)
 		return
 	end
 
@@ -20,8 +20,9 @@ local function load_config_files()
 		if t == "file" and name:match("%.lua$") then
 			local module = "config." .. name:gsub("%.lua$", "")
 			local ok, err = pcall(require, module)
+
 			if not ok then
-				vim.api.nvim_err_writeln("Error loading " .. module .. ": " .. err)
+				vim.notify("Error Loading", 1, nil)
 			end
 		end
 	end
