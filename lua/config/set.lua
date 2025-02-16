@@ -1,4 +1,4 @@
-vim.cmd([[colorscheme wildcharm]])
+-- vim.cmd([[colorscheme wildcharm]])
 
 vim.g.have_nerd_font = true
 
