@@ -14,6 +14,7 @@ return {
       -- refer to the configuration section below
       dim = { enabled = true },
       bigfile = { enabled = true },
+      image = { enabled = true },
       indent = {
         enabled = true,
         filter = function(buf)
@@ -82,7 +83,14 @@ return {
         },
       },
 
-      picker = { enabled = true },
+      picker = {
+        enabled = true,
+        sources = {
+          files = {
+            exclude = { "Games" },
+          }
+        }
+      },
     },
     keys = {
       {
