@@ -1,5 +1,8 @@
 -- vim.cmd([[colorscheme wildcharm]])
 
+vim.api.nvim_set_hl(0, "StatusLine", { fg = "#FFFFFF", bg = "#000000", bold = false })
+vim.api.nvim_set_hl(0, "StatusLineNC", { fg = "#FFFFFF", bg = "#000000", bold = false })
+
 vim.g.have_nerd_font = true
 
 vim.opt.tabstop = 2
