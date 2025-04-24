@@ -4,7 +4,9 @@ return {
   -- Calls `require('slimline').setup({})`
   "sschleemilch/slimline.nvim",
   opts = {
-    verbose_mode = true,
+    mode = {
+      verbose = true,
+    },
     style = "fg",
     components = {
       left = {

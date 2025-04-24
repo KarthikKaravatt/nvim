@@ -1,3 +1,4 @@
+-- Clear search highlighting
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- primogen remaps
@@ -22,33 +23,18 @@ vim.keymap.set("n", "<C-Down>", ":resize -2<CR>", { noremap = true, silent = tru
 vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", { noremap = true, silent = true })
 
--- New tab
-vim.keymap.set("n", "<Leader>t", ":tabnew<CR>", { noremap = true, silent = true })
-
--- movement
-vim.keymap.set({ "n", "v" }, "<C-k>", "<cmd>Treewalker Up<cr>", { silent = true })
-vim.keymap.set({ "n", "v" }, "<C-j>", "<cmd>Treewalker Down<cr>", { silent = true })
-vim.keymap.set({ "n", "v" }, "<C-l>", "<cmd>Treewalker Right<cr>", { silent = true })
-vim.keymap.set({ "n", "v" }, "<C-h>", "<cmd>Treewalker Left<cr>", { silent = true })
-
--- swapping
-vim.keymap.set("n", "<C-S-j>", "<cmd>Treewalker SwapDown<cr>", { silent = true })
-vim.keymap.set("n", "<C-S-k>", "<cmd>Treewalker SwapUp<cr>", { silent = true })
-vim.keymap.set("n", "<C-S-l>", "<cmd>Treewalker SwapRight<CR>", { silent = true })
-vim.keymap.set("n", "<C-S-h>", "<cmd>Treewalker SwapLeft<CR>", { silent = true })
-
 -- Set working directory to the same as the current file
 vim.keymap.set(
-	"n",
-	"`",
-	":cd %:p:h<CR>:pwd<CR>",
-	{ noremap = true, silent = true, desc = "Set CWD to current file's directory" }
+  "n",
+  "`",
+  ":cd %:p:h<CR>:pwd<CR>",
+  { noremap = true, silent = true, desc = "Set CWD to current file's directory" }
 )
 
 -- Set working directory to the parent directory of the current file
 vim.keymap.set(
-	"n",
-	"<C-`>",
-	":cd %:p:h:h<CR>:pwd<CR>",
-	{ noremap = true, silent = true, desc = "Set CWD to parent directory" }
+  "n",
+  "<C-`>",
+  ":cd %:p:h:h<CR>:pwd<CR>",
+  { noremap = true, silent = true, desc = "Set CWD to parent directory" }
 )
