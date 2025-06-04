@@ -19,6 +19,7 @@ vim.opt.colorcolumn = "79"
 vim.opt.textwidth = 78
 vim.opt.fileformat = "unix"
 vim.opt.conceallevel = 2
+vim.opt.wrap = false
 
 -- Enable break indent
 vim.opt.breakindent = true
