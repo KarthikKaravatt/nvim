@@ -23,18 +23,18 @@ vim.keymap.set("n", "<C-Down>", ":resize -2<CR>", { noremap = true, silent = tru
 vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", { noremap = true, silent = true })
 
--- Set working directory to the same as the current file
-vim.keymap.set(
-  "n",
-  "`",
-  ":cd %:p:h<CR>:pwd<CR>",
-  { noremap = true, silent = true, desc = "Set CWD to current file's directory" }
-)
+-- -- Set working directory to the same as the current file
+-- vim.keymap.set(
+--   "n",
+--   "`",
+--   ":cd %:p:h<CR>:pwd<CR>",
+--   { noremap = true, silent = true, desc = "Set CWD to current file's directory" }
+-- )
 
 -- Set working directory to the parent directory of the current file
-vim.keymap.set(
-  "n",
-  "<C-`>",
-  ":cd %:p:h:h<CR>:pwd<CR>",
-  { noremap = true, silent = true, desc = "Set CWD to parent directory" }
-)
+-- vim.keymap.set(
+--   "n",
+--   "<C-`>",
+--   ":cd %:p:h:h<CR>:pwd<CR>",
+--   { noremap = true, silent = true, desc = "Set CWD to parent directory" }
+-- )

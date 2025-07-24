@@ -2,6 +2,23 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = "*.tsx", -- Specifies the file pattern for .tsx files
+  callback = function()
+    local filetype = vim.bo.filetype
+    if filetype == "typescriptreact" then
+      -- Check if the command exists before trying to execute it
+      if vim.fn.exists(":TailwindSort") ~= 0 then
+        vim.cmd("TailwindSort")
+      else
+        print("Warning: :TailwindSort command not found. Make sure tailwind-tools is loaded.")
+      end
+    end
+  end,
+  desc = "Run TailwindSort on save for TSX files",
+})
+
 local config_dir = vim.fn.stdpath("config") .. "/lua/config/"
 
 local function load_config_files()
