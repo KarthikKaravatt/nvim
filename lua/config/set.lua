@@ -1,7 +1,7 @@
--- vim.cmd([[colorscheme kanso]])
 
-vim.api.nvim_set_hl(0, "StatusLine", { fg = "#FFFFFF", bg = "#000000", bold = false })
-vim.api.nvim_set_hl(0, "StatusLineNC", { fg = "#FFFFFF", bg = "#000000", bold = false })
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 
 vim.g.have_nerd_font = true
 

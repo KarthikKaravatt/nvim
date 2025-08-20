@@ -1,10 +1,8 @@
-return {
-  lazy = true,
-  event = { "VeryLazy" },
-  -- Calls `require('slimline').setup({})`
-  "sschleemilch/slimline.nvim",
-  opts = {
-    mode = {
+vim.pack.add({
+  "https://github.com/sschleemilch/slimline.nvim",
+})
+require("slimline").setup({
+mode = {
       verbose = true,
     },
     style = "fg",
@@ -15,5 +13,4 @@ return {
         "recording",
       },
     },
-  },
-}
+})
