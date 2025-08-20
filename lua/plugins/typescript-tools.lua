@@ -1,29 +1,44 @@
 return {
-  "pmizio/typescript-tools.nvim",
-  dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-  event = { "BufRead *.tsx", "BufRead *.ts", "BufRead *.jsx", "BufRead *.js" },
-  opts = {
-    settings = {
-      tsserver_format_options = {
-        insertSpaceAfterCommaDelimiter = false,
-        insertSpaceAfterConstructor = false,
-        insertSpaceAfterSemicolonInForStatements = false,
-        insertSpaceBeforeAndAfterBinaryOperators = false,
-        insertSpaceAfterKeywordsInControlFlowStatements = false,
-        insertSpaceAfterFunctionKeywordForAnonymousFunctions = false,
-        insertSpaceBeforeFunctionParenthesis = false,
-        insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis = false,
-        insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets = false,
-        insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces = false,
-        insertSpaceAfterOpeningAndBeforeClosingEmptyBraces = false,
-        insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces = false,
-        insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces = false,
-        insertSpaceAfterTypeAssertion = false,
-        placeOpenBraceOnNewLineForFunctions = false,
-        placeOpenBraceOnNewLineForControlBlocks = false,
-        semicolons = "ignore",
-        indentSwitchCase = false,
-      },
-    }
-  },
+  -- "pmizio/typescript-tools.nvim",
+  -- dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+  -- event = { "BufRead *.tsx", "BufRead *.ts", "BufRead *.jsx", "BufRead *.js" },
+  -- opts = {
+  --   settings = {
+  --     tsserver_format_options = {
+  --       insertSpaceAfterCommaDelimiter = false,
+  --       insertSpaceAfterConstructor = false,
+  --       insertSpaceAfterSemicolonInForStatements = false,
+  --       insertSpaceBeforeAndAfterBinaryOperators = false,
+  --       insertSpaceAfterKeywordsInControlFlowStatements = false,
+  --       insertSpaceAfterFunctionKeywordForAnonymousFunctions = false,
+  --       insertSpaceBeforeFunctionParenthesis = false,
+  --       insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis = false,
+  --       insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets = false,
+  --       insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces = false,
+  --       insertSpaceAfterOpeningAndBeforeClosingEmptyBraces = false,
+  --       insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces = false,
+  --       insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces = false,
+  --       insertSpaceAfterTypeAssertion = false,
+  --       placeOpenBraceOnNewLineForFunctions = false,
+  --       placeOpenBraceOnNewLineForControlBlocks = false,
+  --       semicolons = "ignore",
+  --       indentSwitchCase = false,
+  --     },
+  --   }
+  -- },
 }
+-- require('vtsls').config({
+--   -- customize handlers for commands
+--   handlers = {
+--     source_definition = function(err, locations) end,
+--     file_references = function(err, locations) end,
+--     code_action = function(err, actions) end,
+--   },
+--   -- automatically trigger renaming of extracted symbol
+--   refactor_auto_rename = true,
+--   refactor_move_to_file = {
+--     -- If dressing.nvim is installed, telescope will be used for selection prompt. Use this to customize
+--     -- the opts for telescope picker.
+--     telescope_opts = function(items, default) end,
+--   }
+-- })
