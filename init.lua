@@ -1,6 +1,9 @@
 --config
 require("config.set")
-require("config.lsp")
+require("config.lsp.setup")
+
+--lsp
+require('config.lsp.lua_ls')
 
 --plugins
 require("plugins.treesitter")
@@ -10,3 +13,5 @@ require("plugins.status-line")
 require("plugins.completion")
 require("plugins.dashboard")
 require("plugins.fzf")
+require("plugins.ui-nvim")
+

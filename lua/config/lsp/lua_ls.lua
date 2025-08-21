@@ -1,4 +1,4 @@
-return {
+vim.lsp.config['lua_ls'] = {
 	cmd = {
 		"lua-language-server",
 	},
@@ -40,3 +40,7 @@ return {
 	single_file_support = true,
 	log_level = vim.lsp.protocol.MessageType.Warning,
 }
+
+vim.lsp.enable({
+  "lua_ls"
+})

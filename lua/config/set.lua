@@ -62,4 +62,4 @@ vim.opt.showtabline = 0
 vim.opt.fillchars = { eob = " " }
 
 -- set border
-vim.o.winborder = 'rounded'
+-- vim.o.winborder = 'rounded'
