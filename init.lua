@@ -4,6 +4,7 @@ require("config.lsp.setup")
 
 --lsp
 require('config.lsp.lua_ls')
+require('config.lsp.zls')
 
 --plugins
 require("plugins.treesitter")
