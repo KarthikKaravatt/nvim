@@ -5,6 +5,7 @@ require("config.lsp.setup")
 --lsp
 require('config.lsp.lua_ls')
 require('config.lsp.zls')
+require('config.lsp.rust_analyzer')
 
 --plugins
 require("plugins.treesitter")
