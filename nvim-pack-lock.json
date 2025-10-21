@@ -1,0 +1,24 @@
+{
+  "plugins": {
+    "blink.cmp": {
+      "version": ">=0.0.0"
+    },
+    "dashboard-nvim": [],
+    "dropbar.nvim": {
+      "rev": "ce20224"
+    },
+    "fzf-lua": {
+      "rev": "d45ce94"
+    },
+    "github-nvim-theme": [],
+    "nvim-treesitter": {
+      "rev": "846d5113",
+      "version": "'main'"
+    },
+    "oil.nvim": {
+      "rev": "7194872"
+    },
+    "slimline.nvim": [],
+    "ui.nvim": []
+  }
+}
