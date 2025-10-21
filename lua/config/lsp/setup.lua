@@ -22,4 +22,9 @@ vim.diagnostic.config({
   },
 })
 
-vim.keymap.set("n", "F", function() vim.lsp.buf.format() end)
+vim.keymap.set("n", "F",
+  function()
+    vim.lsp.buf.format()
+    vim.notify("Formated code")
+  end
+)
