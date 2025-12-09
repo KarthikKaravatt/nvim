@@ -3,6 +3,7 @@ vim.pack.add({
 })
 
 local ts_parsers = {
+  "wgsl",
   "bash",
   "c",
   "git_config",

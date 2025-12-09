@@ -1,24 +1,50 @@
 {
   "plugins": {
     "blink.cmp": {
+      "rev": "b19413d214068f316c78978b08264ed1c41830ec",
+      "src": "https://github.com/Saghen/blink.cmp",
       "version": ">=0.0.0"
     },
-    "dashboard-nvim": [],
+    "dashboard-nvim": {
+      "rev": "0775e567b6c0be96d01a61795f7b64c1758262f6",
+      "src": "https://github.com/nvimdev/dashboard-nvim"
+    },
+    "dashboard.nvim": {
+      "rev": "ba80a1e57feb278872c6bb5c2b1048a80b58e921",
+      "src": "https://github.com/MeanderingProgrammer/dashboard.nvim"
+    },
     "dropbar.nvim": {
-      "rev": "ce20224"
+      "rev": "ce202248134e3949aac375fd66c28e5207785b10",
+      "src": "https://github.com/Bekaboo/dropbar.nvim"
     },
     "fzf-lua": {
-      "rev": "d45ce94"
+      "rev": "95dcadd8f4381c8407cb1e532a732397ce2194fe",
+      "src": "https://github.com/ibhagwan/fzf-lua"
     },
-    "github-nvim-theme": [],
+    "github-nvim-theme": {
+      "rev": "c106c9472154d6b2c74b74565616b877ae8ed31d",
+      "src": "https://github.com/projekt0n/github-nvim-theme"
+    },
+    "nvim-lspconfig": {
+      "rev": "a2bd1cf7b0446a7414aaf373cea5e4ca804c9c69",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
     "nvim-treesitter": {
-      "rev": "846d5113",
+      "rev": "f47f549f74cea5d5f25a5205c9e127cd882f1d20",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
       "version": "'main'"
     },
     "oil.nvim": {
-      "rev": "7194872"
+      "rev": "cbcb3f997f6f261c577b943ec94e4ef55108dd95",
+      "src": "https://github.com/stevearc/oil.nvim"
     },
-    "slimline.nvim": [],
-    "ui.nvim": []
+    "slimline.nvim": {
+      "rev": "b23d6239ae06d7b422b30b227756971348ffcd68",
+      "src": "https://github.com/sschleemilch/slimline.nvim"
+    },
+    "ui.nvim": {
+      "rev": "4670854550f82c51ef5b1640d3b2a36241f8d84b",
+      "src": "https://github.com/OXY2DEV/ui.nvim"
+    }
   }
 }

@@ -7,6 +7,7 @@ require('config.lsp.lua_ls')
 require('config.lsp.zls')
 require('config.lsp.rust_analyzer')
 require('config.lsp.harper')
+require('config.lsp.wgsl')
 
 --plugins
 require("plugins.treesitter")
