@@ -28,3 +28,13 @@ vim.keymap.set("n", "F",
     vim.notify("Formated code")
   end
 )
+vim.keymap.set("n", "<leader>cn",
+  function()
+    vim.lsp.buf.rename()
+  end
+)
+vim.keymap.set("n", "<leader>ca",
+  function()
+    vim.lsp.buf.code_action();
+  end
+)
