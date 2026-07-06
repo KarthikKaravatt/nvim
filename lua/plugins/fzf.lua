@@ -8,6 +8,16 @@ vim.keymap.set("n", '<leader>ff',
     fzf.files()
   end
 )
+vim.keymap.set("n", '<leader>fd',
+  function()
+    fzf.files({cwd = vim.fn.expand('%:p:h')})
+  end
+)
+vim.keymap.set("n", '<leader>fn',
+  function()
+    fzf.files({cwd = vim.fn.stdpath('config')})
+  end
+)
 vim.keymap.set("n", '<leader>fb',
   function()
     fzf.buffers()

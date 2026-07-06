@@ -19,4 +19,5 @@ require("plugins.dashboard")
 require("plugins.fzf")
 require("plugins.ui-nvim")
 require("plugins.dropbar");
+require("plugins.typescript-tools");
 
