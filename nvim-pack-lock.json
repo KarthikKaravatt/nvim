@@ -18,7 +18,7 @@
       "src": "https://github.com/Bekaboo/dropbar.nvim"
     },
     "fzf-lua": {
-      "rev": "774150bc05f774af1df614f55d156b3318c6decd",
+      "rev": "532d463f5c83595192fe740572d8fd6902b2217a",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "github-nvim-theme": {
@@ -33,6 +33,10 @@
       "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter",
       "version": "'main'"
+    },
+    "nvim-web-devicons": {
+      "rev": "dad71387de386a946b123079d0e53f23028f3abd",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "oil.nvim": {
       "rev": "b73018b75affd13fa38e2fc94ef753b465f770d7",
@@ -55,7 +59,7 @@
       "src": "https://github.com/OXY2DEV/ui.nvim"
     },
     "zig.vim": {
-      "rev": "e3becb683d29c6b15c7ecbbaa349431a1a3bd55d",
+      "rev": "71f3454efc5cf781aba507f709b921993d096731",
       "src": "https://codeberg.org/ziglang/zig.vim"
     }
   }
