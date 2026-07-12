@@ -9,7 +9,9 @@ require('config.lsp.rust_analyzer')
 require('config.lsp.harper')
 require('config.lsp.wgsl')
 require("config.lsp.clangd")
-require("config.lsp.basedpyright")
+require("config.lsp.pyrefly")
+require("config.lsp.ruff")
+
 
 --plugins
 require("plugins.treesitter")
@@ -23,4 +25,3 @@ require("plugins.ui-nvim")
 require("plugins.dropbar");
 require("plugins.typescript-tools");
 require("plugins.web-devicons");
-
