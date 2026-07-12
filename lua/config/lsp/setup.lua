@@ -22,7 +22,7 @@ vim.diagnostic.config({
   },
 })
 
-vim.keymap.set("n", "F",
+vim.keymap.set("n", "<leafer>f",
   function()
     vim.lsp.buf.format()
     vim.notify("Formated code")
