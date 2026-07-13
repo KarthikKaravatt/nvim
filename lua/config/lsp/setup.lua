@@ -48,8 +48,3 @@ vim.keymap.set("n", "<leader>ca",
     vim.lsp.buf.code_action();
   end
 )
-vim.keymap.set("n", "<leader>cd",
-  function()
-    vim.lsp.buf.workspace_diagnostics();
-  end
-)
