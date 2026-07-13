@@ -11,6 +11,7 @@ require('config.lsp.wgsl')
 require("config.lsp.clangd")
 require("config.lsp.pyrefly")
 require("config.lsp.ruff")
+require("config.lsp.neocmakelsp")
 
 
 --plugins
