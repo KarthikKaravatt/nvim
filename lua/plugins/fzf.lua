@@ -34,13 +34,13 @@ vim.keymap.set("n", '<leader>gd',
   end
 )
 
-vim.keymap.set("n", '<leader>ld',
+vim.keymap.set("n", '<leader>fd',
   function()
     fzf.diagnostics_document()
   end
 )
 
-vim.keymap.set("n", '<leader>lr',
+vim.keymap.set("n", '<leader>fr',
   function()
     fzf.lsp_references()
   end
