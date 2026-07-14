@@ -22,10 +22,20 @@ vim.diagnostic.config({
   },
 })
 
-vim.keymap.set("n", "F",
+vim.keymap.set("n", "<leader>lf",
   function()
     vim.lsp.buf.format()
     vim.notify("Formated code")
+  end
+)
+vim.keymap.set("n", "<leader>li",
+  function()
+    vim.lsp.buf.implementation()
+  end
+)
+vim.keymap.set("n", "<leader>ld",
+  function()
+    vim.lsp.buf.definition()
   end
 )
 vim.keymap.set("n", "<leader>cn",

@@ -10,12 +10,12 @@ vim.keymap.set("n", '<leader>ff',
 )
 vim.keymap.set("n", '<leader>fd',
   function()
-    fzf.files({cwd = vim.fn.expand('%:p:h')})
+    fzf.files({ cwd = vim.fn.expand('%:p:h') })
   end
 )
 vim.keymap.set("n", '<leader>fn',
   function()
-    fzf.files({cwd = vim.fn.stdpath('config')})
+    fzf.files({ cwd = vim.fn.stdpath('config') })
   end
 )
 vim.keymap.set("n", '<leader>fb',
@@ -34,13 +34,13 @@ vim.keymap.set("n", '<leader>gd',
   end
 )
 
-vim.keymap.set("n", '<leader>ld',
+vim.keymap.set("n", '<leader>fd',
   function()
     fzf.diagnostics_document()
   end
 )
 
-vim.keymap.set("n", '<leader>lr',
+vim.keymap.set("n", '<leader>fr',
   function()
     fzf.lsp_references()
   end
