@@ -48,3 +48,18 @@ vim.keymap.set("n", "<leader>ca",
     vim.lsp.buf.code_action();
   end
 )
+
+
+local lsp_active = true
+
+local lsp_active = true
+
+vim.keymap.set('n', '<leader>td', function()
+  local new_status = not vim.diagnostic.is_enabled()
+  vim.diagnostic.enable(new_status)
+  if new_status then
+    vim.notify("Diagnostics enabled")
+  else
+    vim.notify("Diagnostics disabled")
+  end
+end)
